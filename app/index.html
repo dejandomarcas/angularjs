@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es-ES">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>My first AngularJS App</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- bower:css -->
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+		<!-- endbower -->
+		<!-- inject:css -->
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<!-- endinject -->
+	</head>
+	<body ng-app="blog">
+	<div class="container-fluid">
+		<div class="row">
+			<aside class="col-sm-3">
+				<a ng-href="/new">Crear entrada</a>
+			</aside>
+			<section class="col-sm-9" ng-view></section>
+		</div>
+	</div>
+	<!-- bower:js -->
+	<script src="lib/jquery/dist/jquery.js"></script>
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+	<!-- endbower -->
+	<!-- inject:js -->
+	<script src="/scripts/app.js"></script>
+	<script src="/scripts/controllers.js"></script>
+	<script src="/scripts/services.js"></script>
+	<!-- endinject -->
+	</body>
+</html>
