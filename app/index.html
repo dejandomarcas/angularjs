@@ -6,31 +6,41 @@
 		<title>My first AngularJS App</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- build:css css/style.min.css -->
 		<!-- bower:css -->
 		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="lib/fontawesome/css/font-awesome.css" />
 		<!-- endbower -->
 		<!-- inject:css -->
 		<link rel="stylesheet" href="/stylesheets/main.css">
 		<!-- endinject -->
+		<!-- endbuild -->
 	</head>
-	<body ng-app="blog">
+	<body ng-app="app">
 	<div class="container-fluid">
 		<div class="row">
-			<aside class="col-sm-3">
-				<a ng-href="/new">Crear entrada</a>
+			<aside class="col-sm-3 author-profile">
+				Información del autor
 			</aside>
 			<section class="col-sm-9" ng-view></section>
 		</div>
 	</div>
+	<!-- build:js js/vendor.min.js -->
 	<!-- bower:js -->
 	<script src="lib/jquery/dist/jquery.js"></script>
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="lib/angular-route/angular-route.js"></script>
+	<script src="lib/angular-resource/angular-resource.js"></script>
 	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:js js/app.min.js -->
 	<!-- inject:js -->
-	<script src="/scripts/app.js"></script>
-	<script src="/scripts/controllers.js"></script>
+	<script src="/scripts/templates.js"></script>
 	<script src="/scripts/services.js"></script>
+	<script src="/scripts/controllers.js"></script>
+	<script src="/scripts/app.js"></script>
 	<!-- endinject -->
+	<!-- endbuild -->
 	</body>
 </html>

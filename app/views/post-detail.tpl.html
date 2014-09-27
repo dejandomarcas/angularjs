@@ -5,7 +5,8 @@
 	<p class="blog-post-body">
 		{{ postdetail.post.body }}
 	</p>
-	<p>Autor: <strong>{{ postdetail.user[0].name }}</strong><span class="fa fa-mail"></span>{{ postdetail.user[0].email }}
+	<p>Autor: <strong>{{ postdetail.user[0].name }}</strong>
+		<span class="fa fa-envelope"></span>{{ postdetail.user[0].email }}
 	</p>
 </article>
 <aside class="comments">
@@ -17,9 +18,9 @@
 	</header>
 	<ul class="comments-list">
 		<li class="comment-item" ng-repeat="comment in postdetail.comments">
-			<span class="fa fa-user"></span>
+			<span class="fa fa-user"></span> 
 			<span class="comment-author">{{ comment.email }}</span>
-			<p class="comment-body">{{ commen.body }}</p>
+			<p class="comment-body">{{ comment.body }}</p>
 		</li>
 	</ul>
 </aside>

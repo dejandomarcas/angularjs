@@ -1,11 +1,13 @@
 (function() {
 	'use strict';
 
-	angular.module('blog', ['ngRoute', 'blog.controllers']);
+	/* @ngInject */
+	angular
+		.module('app', ['ngRoute', 'app.controllers', 'app.templates'])
+		.config(config);
 
+	/* @ngInject */
 	function config($locationProvider, $routeProvider) {
-
-		// Elimino los # de las URL, mas limpito
 		$locationProvider.html5Mode(true);
 
 		$routeProvider
@@ -14,20 +16,11 @@
 				controller: 'PostListCtrl',
 				controllerAs: 'postlist'
 			})
-			.when('/post/:postId', {
+			.when('/:postId', {
 				templateUrl: 'views/post-detail.tpl.html',
 				controller: 'PostDetailCtrl',
 				controllerAs: 'postdetail'
-			})
-			.when('/new', {
-				templateUrl: 'views/post-create.tpl.html',
-				controller: 'PostCreateCtrl',
-				controllerAs: 'postcreate'
 			});
 	}
-
-	angular
-		.module('blog')
-		.config(config);
 
 })();
