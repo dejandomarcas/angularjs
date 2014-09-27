@@ -35,7 +35,7 @@ $ bower install
 </code></pre>
 
 <h3>
-<a name="user-content-go-to-production" class="anchor" href="#go-to-production" aria-hidden="true"><span class="octicon octicon-link"></span></a>Go-to-production</h3>
+<a name="user-content-go-to-production" class="anchor" href="#go-to-production" aria-hidden="true"><span class="octicon octicon-link"></span></a>Production mode</h3>
 
 <pre><code>$ gulp build
 $ gulp server-dist
